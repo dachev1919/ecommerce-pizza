@@ -1,0 +1,147 @@
+.footer {
+    background: var(--secondary-background-color);
+    padding: 2rem 0;
+}
+
+.footer__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.social__links,
+.rights,
+.logo h5,
+.footer__text,
+.footer__title,
+.delivery__time-item span,
+.delivery__time-item p {
+    color: var(--primary-color);
+    font-family: "RocknRoll One", sans-serif !important;
+}
+
+.footer__logo .logo * {
+    margin: 0;
+}
+
+.footer__logo .logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.footer__logo img {
+    max-width: 40px;
+    object-fit: contain;
+}
+
+.footer__logo h5 {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.footer__text {
+    font-size: .85rem;
+    max-width: 90%;
+    line-height: 175%;
+}
+
+footer .delivery__time-item {
+    background: transparent;
+}
+
+.delivery__time-item p {
+    font-size: .8rem;
+}
+
+.delivery__time-item span {
+    font-size: 1rem;
+}
+
+.newsletter {
+    padding: 7px 7px 7px 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.newsletter button {
+    background: var(--primary-color);
+    border: none;
+    display: flex;
+    outline: none;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+}
+
+.newsletter button i {
+    color: #fff;
+}
+
+.newsletter button:hover {
+    background: var(--secondary-color);
+}
+
+.newsletter input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--primary-color);
+    opacity: 1;
+    max-width: calc(100% - 60px);
+}
+
+.footer__newsletter .footer__text {
+    line-height: 150%;
+    padding: .5rem 0 0 0;
+}
+
+.rights {
+    pointer-events: none;
+    font-size: .7rem;
+    opacity: .85;
+    user-select: none;
+}
+
+.social__links {
+    font-size: .8rem;
+}
+
+.social__links p,
+.social__links span a {
+    display: flex;
+    line-height: 100%;
+}
+
+.social__links i {
+    font-size: 1rem;
+}
+
+.social__links a {
+    transition: all .3s ease;
+}
+
+.social__links a:hover {
+    opacity: .8;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .newsletter {
+        padding: 5px;
+    }
+
+    .newsletter input {
+        max-width: calc(100% - 33px);
+        font-size: .8rem;
+    }
+
+    .newsletter button {
+        width: 30px;
+    }
+}

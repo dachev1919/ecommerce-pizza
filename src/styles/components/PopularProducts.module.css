@@ -1,0 +1,26 @@
+.popular__products-categories {
+    background: var(--secondary-color);
+    margin-top: 2rem;
+    padding: 1.4rem 0;
+    border-radius: 5px;
+}
+
+.popular__products-categories img {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.popular__products-categories button {
+    border: none;
+    outline: none;
+    padding: .5rem 1.4rem;
+    background: transparent;
+    color: #fff;
+    transition: all .3s ease;
+    border-radius: 5px;
+}
+
+.popular__products-categories button.button__active {
+    background: #fff;
+    color: var(--secondary-color);
+}

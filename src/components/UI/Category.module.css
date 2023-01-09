@@ -1,0 +1,28 @@
+.category__item {
+    padding: 2rem;
+    background: var(--secondary-background-color);
+    border-radius: 5px;
+    transition: all .3s ease;
+    transform: translateY(0);
+    cursor: pointer;
+}
+
+.category__item:hover {
+    transform: translateY(-10px);
+}
+
+.category__img {
+    flex: 0 0 64px;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1920px) {
+    .category__item {
+        padding: calc(1rem + (2 - 1) * ((100vw - 992px) / (1920 - 992)));
+    }
+}
+
+@media screen and (max-width: 575px){
+    .category__item {
+        padding: 1rem;
+    }
+}

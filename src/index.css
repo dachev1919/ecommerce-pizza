@@ -1,0 +1,135 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web&display=swap");
+
+:root {
+  --primary-color: rgb(33, 34, 69);
+  --secondary-color: rgb(223, 32, 32);
+  --background-color: rgb(252, 252, 252);
+  --secondary-background-color: rgb(253, 228, 228);
+  --bs-body-color: rgb(33, 34, 69);
+}
+
+/* reset default style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* base style */
+body {
+  background: var(--background-color);
+  font-family: "Istok Web", sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "RocknRoll One", sans-serif !important;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  transition: all .3s ease;
+}
+
+a:hover {
+  color: inherit;
+}
+
+h1,
+h2 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+section {
+  padding: 60px 0;
+}
+
+/*duplicate classes*/
+
+.btn {
+  border: none;
+  transition: all .3s ease;
+  border-radius: 5px;
+  padding: .8rem 1.3rem;
+  outline: none;
+  text-transform: uppercase;
+  line-height: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  letter-spacing: .03em;
+}
+
+.btn i {
+  margin-left: .5rem;
+  transition: all .3s ease;
+  position: relative;
+  top: -1px;
+}
+
+.btn.with-icon:hover {
+  padding-right: .8rem;
+}
+
+.btn.with-icon:hover i {
+  margin-left: 1rem;
+}
+
+.btn.btn__primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn.btn__primary:hover {
+  background: var(--secondary-color);
+}
+
+.btn.btn__secondary {
+  background: transparent;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+.btn.btn__secondary:hover {
+  border-color: var(--secondary-color);
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+@media screen and (max-width: 1920px) {
+  .btn:not(.without__responsive) {
+    font-size: calc(0.7rem + (1 - 0.7) * ((100vw - 20rem) / (120 - 20)));
+    padding: calc(0.4rem + (0.8 - 0.4) * ((100vw - 20rem) / (120 - 20))) calc(.6rem + (1.3 - .6) * ((100vw - 20rem) / (120 - 20)));
+  }
+
+  .btn:not(.without__responsive) i {
+    margin-left: calc(.1rem + (.5 - .1) * ((100vw - 20rem) / (120 - 20)));
+  }
+
+  .btn:not(.without__responsive).with-icon:hover {
+    padding-right: calc(.5rem + (.8 - .5) * ((100vw - 20rem) / (120 - 20)));
+  }
+
+  .btn:not(.without__responsive).with-icon:hover i {
+    margin-left: calc(0.2rem + (1 - 0.2) * ((100vw - 20rem) / (120 - 20)));
+  }
+}
+/*END duplicate classes*/

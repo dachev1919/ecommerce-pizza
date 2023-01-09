@@ -1,0 +1,48 @@
+.hero__content {
+    padding-top: 70px;
+}
+
+.hero__content p {
+    font-size: 1rem;
+    line-height: 150%;
+    color: #777;
+}
+
+.hero__title {
+    font-size: 2.5rem;
+    line-height: 150%;
+}
+
+.hero__title span {
+    color: var(--secondary-color);
+}
+
+.hero__img {}
+
+.hero__content-footer p i {
+    background: var(--secondary-color);
+    font-weight: 400;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    line-height: 100%;
+}
+
+.hero__content-footer p {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+@media screen and (max-width: 1920px) {
+    .hero__content {
+        padding-top: calc(0px + (70 - 0) * ((100vw - 768px) / (1920 - 768)));
+    }
+    .hero__title {
+        font-size: calc(1.5rem + (2.5 - 1.5) * ((100vw - 20rem) / (120 - 20)));
+    }
+}
