@@ -6,13 +6,11 @@ import { cartAction } from "../../store/shopping-cart/cartSlice";
 const Cart = ({title, price, image01, quantity, product}) => {
     const dispatch = useDispatch();
 
-    const quantityAddHandler = () => {
-        dispatch(cartAction.addItem(product));
-    }
+    const quantityAddHandler = () => dispatch(cartAction.addItem(product));
     
-    const quantityDecreaseHandler = () => {
-        dispatch(cartAction.removeItem(product));
-    }
+    const quantityDecreaseHandler = () => dispatch(cartAction.removeItem(product.id));
+
+    const deleteProductHandler = () => dispatch(cartAction.deleteItem(product.id));
 
     return (
         <ListGroupItem className='border-0'>
@@ -34,7 +32,9 @@ const Cart = ({title, price, image01, quantity, product}) => {
                         </div>
                     </div>
 
-                    <span className={styles['cart__delete']}><i className="ri-close-line"/></span>
+                    <span className={styles['cart__delete'] } onClick={ deleteProductHandler }>
+                        <i className="ri-close-line"/>
+                    </span>
                 </div>
             </div>
         </ListGroupItem>
