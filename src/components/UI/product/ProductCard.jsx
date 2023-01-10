@@ -16,7 +16,7 @@ const ProductCard = ({ data }) => {
             image01,
         }));
 
-        toast.success('Product added successfully');
+        toast.success('product added successfully');
     };
 
     return (

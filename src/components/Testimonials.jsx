@@ -2,7 +2,7 @@ import styles from '../styles/components/Testimonials.module.css';
 import { Col, Container, Row } from "reactstrap";
 
 import networkImg from "../assets/images/network.png";
-import TestimonialSlider from "./UI/Sliders/TestimonialSlider";
+import TestimonialSlider from "./UI/sliders/TestimonialSlider";
 const Testimonials = () => {
     return (
         <Container className={styles['testimonial__wrapper']}>

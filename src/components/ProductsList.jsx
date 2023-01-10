@@ -1,5 +1,5 @@
 import { Col } from "reactstrap";
-import ProductCard from "./UI/Product/ProductCard";
+import ProductCard from "./UI/product/ProductCard";
 import products from "../assets/fake-data/products";
 
 function fixCategoryName(category) {

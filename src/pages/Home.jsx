@@ -1,6 +1,7 @@
-import Helmet from "../components/Helmet/Helmet";
+
 import styles from "../styles/pages/Home.module.css";
-import Category from "../components/UI/Category/Category";
+import Helmet from "../components/helmet/Helmet";
+import Category from "../components/UI/category/Category";
 import Hero from "../components/Hero";
 import Features from "../components/Features";
 import PopularProducts from "../components/PopularProducts";
@@ -11,7 +12,7 @@ import Testimonials from "../components/Testimonials";
 
 const Home = () => {
     return (
-        <Helmet title="Home">
+        <Helmet title='Home'>
             <section className={ styles.home }>
                 <Hero/>
             </section>
