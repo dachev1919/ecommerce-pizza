@@ -1,7 +1,7 @@
-import categoryImg01 from "../../assets/images/category-01.png";
-import categoryImg02 from "../../assets/images/category-02.png";
-import categoryImg03 from "../../assets/images/category-03.png";
-import categoryImg04 from "../../assets/images/category-04.png";
+import categoryImg01 from "../../../assets/images/category-01.png";
+import categoryImg02 from "../../../assets/images/category-02.png";
+import categoryImg03 from "../../../assets/images/category-03.png";
+import categoryImg04 from "../../../assets/images/category-04.png";
 import { Col, Container, Row } from "reactstrap";
 import styles from './Category.module.css';
 import { Link } from "react-router-dom";

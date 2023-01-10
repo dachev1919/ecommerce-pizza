@@ -70,15 +70,15 @@
     font-size: .8rem;
 }
 
-
-
 .cart__close:hover {
     opacity: .8;
 }
 
 .cart__list {}
 
-.cart__bottom {}
+.cart__bottom h6 span {
+    color: var(--secondary-color);
+}
 
 @media screen and (max-width: 576px) {
     .cart__wrapper {

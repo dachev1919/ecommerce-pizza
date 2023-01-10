@@ -1,7 +1,7 @@
 import styles from "./ProductCard.module.css";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { cartAction } from "../../store/shopping-cart/cartSlice";
+import { cartAction } from "../../../store/shopping-cart/cartSlice";
 import { toast } from "react-toastify";
 
 const ProductCard = ({ data }) => {

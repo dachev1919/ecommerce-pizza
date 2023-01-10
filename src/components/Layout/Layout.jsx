@@ -1,7 +1,7 @@
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Routers from "../../routes/Routers";
-import Cart from "../UI/Cart";
+import Cart from "../UI/Cart/Cart";
 import { useSelector } from "react-redux";
 
 

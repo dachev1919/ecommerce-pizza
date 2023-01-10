@@ -1,7 +1,7 @@
-import styles from "../../styles/components/CartItem.module.css";
+import styles from "../../../styles/components/CartItem.module.css";
 import { ListGroupItem } from "reactstrap";
 import { useDispatch } from "react-redux";
-import { cartAction } from "../../store/shopping-cart/cartSlice";
+import { cartAction } from "../../../store/shopping-cart/cartSlice";
 
 const Cart = ({title, price, image01, quantity, product}) => {
     const dispatch = useDispatch();

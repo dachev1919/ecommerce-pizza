@@ -1,9 +1,9 @@
-import styles from "../../styles/components/Cart.module.css";
+import styles from "../../../styles/components/Cart.module.css";
 import { ListGroup } from "reactstrap";
 import CartItem from "./CartItem";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { cartUiAction } from "../../store/shopping-cart/cartUiSlice";
+import { cartUiAction } from "../../../store/shopping-cart/cartUiSlice";
 
 const Cart = ({ showCart }) => {
     const dispatch = useDispatch();

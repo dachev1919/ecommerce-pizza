@@ -1,6 +1,6 @@
 import Helmet from "../components/Helmet/Helmet";
 import styles from "../styles/pages/Home.module.css";
-import Category from "../components/UI/Category";
+import Category from "../components/UI/Category/Category";
 import Hero from "../components/Hero";
 import Features from "../components/Features";
 import PopularProducts from "../components/PopularProducts";
