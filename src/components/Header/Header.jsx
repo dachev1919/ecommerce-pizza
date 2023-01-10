@@ -3,6 +3,8 @@ import { Container } from "reactstrap";
 import logo from "../../assets/images/res-logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { cartUiAction } from "../../store/shopping-cart/cartUiSlice";
 
 const NAV__LINKS = [
     {
@@ -26,7 +28,13 @@ const NAV__LINKS = [
 const Header = () => {
     const mobileMenu = useRef(null);
     const headerRef = useRef(null);
+    const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+    const dispatch = useDispatch();
     const toggleMenu = () => mobileMenu.current.classList.toggle(styles.show);
+
+    const toggleCart = () => {
+        dispatch(cartUiAction.showCart())
+    }
 
     const stickyHeaderFunc = () => {
         window.addEventListener("scroll", () => {
@@ -71,9 +79,9 @@ const Header = () => {
                     </div>
 
                     <div className={ `${ styles["nav__right"] } d-flex align-items-center gap-4` }>
-                        <span className={ styles["cart__icon"] }>
+                        <span className={ styles["cart__icon"] } onClick={toggleCart}>
                             <i className="ri-shopping-basket-line"/>
-                            <span className={ styles["cart__badge"] }>2</span>
+                            <span className={ styles["cart__badge"] }>{ totalQuantity }</span>
                         </span>
 
                         <span className={ styles['user__icon'] }>

@@ -66,7 +66,6 @@ section {
 /*duplicate classes*/
 
 .btn {
-  border: none;
   transition: all .3s ease;
   border-radius: 5px;
   padding: .8rem 1.3rem;
@@ -76,6 +75,7 @@ section {
   font-size: 1rem;
   cursor: pointer;
   letter-spacing: .03em;
+  border: 1px solid;
 }
 
 .btn i {
@@ -96,16 +96,18 @@ section {
 .btn.btn__primary {
   background: var(--primary-color);
   color: #fff;
+  border-color: var(--primary-color);
 }
 
 .btn.btn__primary:hover {
   background: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 
 .btn.btn__secondary {
   background: transparent;
   color: var(--secondary-color);
-  border: 1px solid var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 
 .btn.btn__secondary:hover {

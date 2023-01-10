@@ -7,6 +7,7 @@ import PopularProducts from "../components/PopularProducts";
 import WhyTasty from "../components/WhyTasty";
 import { Col, Container, Row } from "reactstrap";
 import ProductsList from "../components/ProductsList";
+import Testimonials from "../components/Testimonials";
 
 const Home = () => {
     return (
@@ -40,6 +41,10 @@ const Home = () => {
                         <ProductsList filtered='pizza' limit={4}/>
                     </Row>
                 </Container>
+            </section>
+
+            <section>
+                <Testimonials />
             </section>
         </Helmet>
     );
