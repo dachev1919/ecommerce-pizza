@@ -1,0 +1,22 @@
+.search-widget,
+.sorting-widget select {
+    border: 1px solid var(--secondary-background-color);
+    padding: .5rem .7rem .5rem 1rem;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.sorting-widget select {
+    width: 50%;
+}
+
+.search-widget input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+}
+
+.search-widget span {
+    cursor: pointer;
+}

@@ -6,16 +6,47 @@ function fixCategoryName(category) {
     return category.trim().toLowerCase();
 }
 
-function productsFilter(products, categoryName) {
-    return products.filter((product) => fixCategoryName(product.category) === categoryName);
+function productsFilter(products, filterName, searchValue) {
+    if (filterName === 'search') {
+        return products.filter((product) => {
+            if (searchValue === '') return product;
+
+            if (searchValue !== '' && product.title.toLowerCase().includes(searchValue)) {
+                return product;
+            }
+
+            return false;
+        })
+    }
+
+    if (filterName === 'ascending') {
+        return products.sort((a, b) => a.title.localeCompare(b.title));
+    }
+
+    if (filterName === 'descending') {
+        return products.sort((a, b) => b.title.localeCompare(a.title));
+    }
+
+    if (filterName === 'high-price') {
+        return products.sort((a, b) => Number(b.price) - Number(a.price));
+    }
+
+    if (filterName === 'low-price') {
+        return products.sort((a, b) => Number(a.price) - Number(b.price));
+    }
+
+    if (filterName === 'default-search') {
+        return products;
+    }
+
+    return products.filter((product) => fixCategoryName(product.category) === filterName);
 }
-const ProductsList = ({filtered = '', limit = 0}) => {
-    const categoryName = fixCategoryName(filtered);
+const ProductsList = ({filtered = '', limit = 0, searchValue = ''}) => {
+    const filterName = fixCategoryName(filtered);
 
-    const productList = categoryName !== '' && categoryName !== 'all'
-        ? productsFilter(products, categoryName, limit)
+    const productList = filterName !== '' && filterName !== 'all'
+        ? productsFilter(products, filterName, searchValue)
         : products;
-
 
     return (
         productList.map((product, index) => {
