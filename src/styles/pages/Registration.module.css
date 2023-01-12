@@ -1,0 +1,9 @@
+.login__form {
+    padding: 1rem;
+    background: var(--secondary-background-color);
+    border-radius: 5px;
+}
+
+.registration {
+    min-height: 400px;
+}

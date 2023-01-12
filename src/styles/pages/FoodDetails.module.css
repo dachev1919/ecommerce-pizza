@@ -1,5 +1,9 @@
 .product__thumbnails-item img {
-    width: 70%;
+    width: 64%;
+}
+
+.product__thumbnails-item:not(:last-child) img {
+    margin-bottom: 20px;
 }
 
 .product__info {
@@ -13,6 +17,10 @@
     line-height: 100%;
 }
 
+.product__main-image img {
+    width: 100%;
+}
+
 .product__price span {
     font-size: 1.5rem;
     color: var(--secondary-color);
@@ -20,6 +28,15 @@
     display: flex;
     line-height: 100%;
     user-select: none;
+}
+
+.product__thumbnails-item img {
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.product__thumbnails-item_a img {
+    border-color: var(--secondary-background-color);
 }
 
 .product__category span {
@@ -36,6 +53,8 @@
 
 .product__tab h6 {
     margin-bottom: 15px;
+    cursor: pointer;
+    transition: all .3s ease;
 }
 
 .product__tab {
@@ -65,16 +84,6 @@
     margin-bottom: 15px;
 }
 
-.review-form input,
-.review-form textarea {
-    width: 100%;
-    background: transparent;
-    padding: .5rem;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid var(--primary-color);
-}
-
 .review__name {
     font-weight: 600;
     display: flex;
@@ -88,4 +97,46 @@
 
 .review__text {
     color: #777;
+}
+
+.product__tab-content__item {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(40px);
+    transition: transform .3s ease, position 0s ease .3s;
+    position: absolute;
+}
+
+.product__tab-content__item_a {
+    position: relative;
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media screen and (max-width: 991px) {
+    .product__buttons button,
+    .product__buttons a {
+        width: 100%;
+    }
+    .product__buttons {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .product__info {
+        padding: 0;
+    }
+
+    .product__thumbnails {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 0 3rem 0;
+    }
+
+    .product__thumbnails img {
+        width: auto;
+        margin: 0!important;
+    }
 }

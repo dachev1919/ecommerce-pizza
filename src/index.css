@@ -80,6 +80,23 @@ section {
 
 /*duplicate classes*/
 
+.form__group textarea,
+.form__group input {
+  width: 100%;
+  background: transparent;
+  padding: .5rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(33, 34, 69, 0.5);
+  margin-bottom: 20px;
+  transition: all .3s ease;
+}
+
+.form__group input:focus-within,
+.form__group textarea:focus-within {
+  border-color: var(--primary-color);
+}
+
 .btn {
   transition: all .3s ease;
   border-radius: 5px;

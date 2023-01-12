@@ -6,8 +6,16 @@
     background: #fff;
 }
 
-.sorting-widget select {
-    width: 50%;
+.sorting-widget {
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sorting-widget select,
+.search-widget {
+    width: 75%;
 }
 
 .search-widget input {
@@ -19,4 +27,17 @@
 
 .search-widget span {
     cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .sorting-widget select,
+    .search-widget {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .search-widget {
+        margin-bottom: 30px;
+    }
 }

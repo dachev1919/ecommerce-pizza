@@ -3,7 +3,7 @@ import Helmet from "../components/helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
 import { Col, Container, Row } from "reactstrap";
 import ProductsList from "../components/ProductsList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const AllFoods = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -14,6 +14,8 @@ const AllFoods = () => {
         setFilterType('search');
     }
 
+    useEffect(() => window.scrollTo(0, 0), []);
+
     return (
         <Helmet title="All Foods">
             <CommonSection title="All Foods"/>
@@ -21,8 +23,8 @@ const AllFoods = () => {
             <section className={styles['all-foods']}>
                 <Container>
                     <Row>
-                        <Col sm="6" className='mb-5'>
-                            <div className={ `${styles["search-widget"]} d-flex align-items-center justify-content-between w-75` }>
+                        <Col sm="6">
+                            <div className={ `${styles["search-widget"]} d-flex align-items-center justify-content-between` }>
                                 <input value={searchTerm} onChange={(e) => searchHandler(e)} type="text" placeholder="I`m looking for..."/>
                                 <span>
                                     <i className="ri-search-line"/>
